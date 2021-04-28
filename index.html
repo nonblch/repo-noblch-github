@@ -5,23 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1c30cc6ff5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
-        <div class="container">
-            <div>
-                <div class="logo"></div>
-                <div>bran<span>d</span></div>
+        <div class="container" >
+            <div class="top">
+                <div class="logo_b">
+                    <div class="logo"><a href="index.html" class="logo_a"></a></div>
+                    <div class="brand"><a href="index.html" class="logo_a_1"><span class="bran">bran</span><span class="d">d</span></a></div>
+                </div>
+                <div class="top_search">
+                    <button class="btn"><span class="browse_word">Browse <i class="fas fa-caret-down fa"></i></span></button>
+                    <form action="#" class="search_form">
+                        <input id="t1" type="text" class="search" placeholder="Search for Item..." ><input type="submit" value="" class="sub">
+                    </form>
+                </div>
             </div>
-            <div>
-                <form>
-                    <input type="button" value="хуй" class="btn">
-                </form>
+            <div class="top_right">
+                <div class="basket"></div>
+                <div class="my_account">
+                    <button onclick="window.location.href = '#';" class="btn_2"><span class="account_w">My account <i class="fas fa-caret-down fa_2"></i></span></button>
+                </div>
             </div>
+        </div>
     </div>
     <div>
         <div class="container">
-
         </div>
     </div>
     <div class="footer">
