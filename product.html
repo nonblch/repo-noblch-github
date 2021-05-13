@@ -19,19 +19,54 @@
                 <p class="bran">BRAN</p>
                 <span class="d">D</span>
             </a>
-            <form class="header-form" action="#">
-                <ul class="browse-menu">
-                    <li><a href="#">Browse
-                        <i class="fas fa-caret-down"></i>
-                    </a></li>
-                </ul>
-                <input class="form-search" type="search" placeholder="Search for Item..." aria-label="Search">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
+            <div class="browse-search">
+                <details class="det_browse">
+                    <summary>
+                        <span class="browse-for-caret">Browse</span>
+                    </summary>
+                    <ul class="drop-down-menu">
+                        <li class="first-for-hr">women</li>
+                        <li><hr class="hr-for-drop"/></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Sweaters/Knits</a></li>
+                        <li><a href="#">Jackets/Coats</a></li>
+                        <li><a href="#">Blazers</a></li>
+                        <li><a href="#">Denim</a></li>
+                        <li><a href="#">Leggings/Pants</a></li>
+                        <li><a href="#">Skirts/Shorts</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li class="first-for-hr">Man</li>
+                        <li><hr class="hr-for-drop"/></li>
+                        <li><a href="#">Tees/Tank tops</a></li>
+                        <li><a href="#">Shirts/Polos</a></li>
+                        <li><a href="#">Sweaters</a></li>
+                        <li><a href="#">Sweatshirts/Hoodies</a></li>
+                        <li><a href="#">Blazers</a></li>
+                        <li><a href="#">Jackets/vests</a></li>
+                    </ul>
+                </details>
+                <form class="header-form" action="#">
+
+                    <input class="form-search" type="search" placeholder="Search for Item..." aria-label="Search">
+                    <button type="submit">
+                        <span class="fas fa-search"></span>
+                    </button>
+                </form>
+            </div>
         </div>
         <div class="header-right">
-            <img src="img/Forma_1.svg" alt="card">
-            <a class="button-site my-acc" href="#">My Account</a>
+            <a class="basket-a" href="#">
+                <div class="basket-dropdown">
+                    <div class="basket-purch"></div>
+                    <span class="basket-total"></span>
+                    <button class="basket-check"></button>
+                    <button class="basket-go"></button>
+                </div>
+                <img src="img/Forma_1.svg" alt="card">
+            </a>
+            <a class="button-site my-acc" href="#">
+                <span class="my-acc-span"> My Account</span>
+            </a>
         </div>
     </div>
     <nav class="navigation">
@@ -55,40 +90,98 @@
                     <a class="menu-link menu_link_product" href="#">Featured</a>
                 </li>
                 <li class="last">
-                    <a class="menu-link menu_link_product" href="#">Hot Deals </a>
+                    <a class="menu-link menu_link_product" href="#">Hot&nbsp;Deals </a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="new_arrivals">
-        <div class="container container_arri">
-            <div class="arri_div">
+        <div class="container arri-container">
                 <span class="arri_span_pro">New arrivals</span>
                 <p class="text_arri_pro">home/men/<span class="arri_span_pro_2">New arrivals</span></p>
-            </div>
         </div>
     </div>
     <section>
         <div class="container">
             <div class="category_pro">
-                <details class="det_category">
-                    <summary>category </summary>
-                    <ul class="category_ul_1">
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Bags</a></li>
-                        <li><a href="#">Denim</a></li>
-                        <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
-                        <li><a href="#">Jackets &amp; Coats</a></li>
-                        <li><a href="#">Pants</a></li>
-                        <li><a href="#">Polos</a></li>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Shorts</a></li>
-                        <li><a href="#">Sweaters &amp; Knits</a></li>
-                        <li><a href="#">T-Shirts</a></li>
-                        <li><a href="#">Tanks</a></li>
-                    </ul>
-                </details>
+                <div class="right-for-pro">
+                    <form oninput="result.value=(range.value)" action="#">
+
+                    </form>
+                    <div class="under-form-det-pro">
+                        <details></details>
+                        <details></details>
+                    </div>
+                    <div class="content-for-pro">
+
+                    </div>
+                    <div class="foot-nav-for-pro">
+                        <div class="foot-nav-num"></div>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="left-for-pro">
+                    <details class="det_category">
+                        <summary>
+                            <span class="cate-word">category</span>
+                        </summary>
+                        <ul class="category_ul_1">
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Bags</a></li>
+                            <li><a href="#">Denim</a></li>
+                            <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
+                            <li><a href="#">Jackets &amp; Coats</a></li>
+                            <li><a href="#">Pants</a></li>
+                            <li><a href="#">Polos</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Sweaters &amp; Knits</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Tanks</a></li>
+                        </ul>
+                    </details>
+                    <details class="det_category">
+                        <summary>
+                            <span class="cate-word">brand</span>
+                        </summary>
+                        <ul class="category_ul_1">
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Bags</a></li>
+                            <li><a href="#">Denim</a></li>
+                            <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
+                            <li><a href="#">Jackets &amp; Coats</a></li>
+                            <li><a href="#">Pants</a></li>
+                            <li><a href="#">Polos</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Sweaters &amp; Knits</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Tanks</a></li>
+                        </ul>
+                    </details>
+                    <details class="det_category">
+                        <summary>
+                            <span class="cate-word">designer</span>
+                        </summary>
+                        <ul class="category_ul_1">
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Bags</a></li>
+                            <li><a href="#">Denim</a></li>
+                            <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
+                            <li><a href="#">Jackets &amp; Coats</a></li>
+                            <li><a href="#">Pants</a></li>
+                            <li><a href="#">Polos</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Sweaters &amp; Knits</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Tanks</a></li>
+                        </ul>
+                    </details>
+                </div>
             </div>
             <div class="product">
                 <div class="top_filter"></div>
@@ -101,7 +194,7 @@
         <div class="container container_b_pro">
             <div class="black_pro">
                 <div class="auto">
-                    <img src="img/auto.svg">
+                    <img src="img/auto.svg" alt="image">
                 </div>
                 <div class="free b_pro_content">
                     <h3>Free Delivery </h3>
@@ -112,7 +205,7 @@
             </div>
             <div class="black_pro">
                 <div class="discount">
-                    <img src="img/discount.svg">
+                    <img src="img/discount.svg" alt="image">
                 </div>
                 <div class="sales b_pro_content">
                     <h3>Sales &amp; Discounts</h3>
@@ -123,7 +216,7 @@
             </div>
             <div class="black_pro">
                 <div class="quality">
-                    <img src="img/quality.svg">
+                    <img src="img/quality.svg" alt="image">
                 </div>
                 <div class="assurance b_pro_content">
                     <h3>Quality Assurance</h3>
