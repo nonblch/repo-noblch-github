@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -350,7 +351,7 @@ body {
 .basket-purch {
     display: flex;
     justify-content: space-between;
-    width: 224px;
+    max-width: 224px;
     align-items: center;
 
 }
@@ -2153,9 +2154,9 @@ img {
     height: auto;
     position: absolute;
     left: 0;
-    bottom: 200px;
     z-index: 10;
     text-align: center;
+    bottom: -25px;
 }
 
 .sim-dot {
@@ -2186,18 +2187,325 @@ img {
     background-color: #fff;
     z-index: 5;
     display: flex;
+    flex-direction: column;
+    padding-top: 73px;
 }
 
-#color option{
+.choose-top {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    min-height: 284px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.choose-text {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.choose-top>h3 {
+    color: #f16d7f;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+}
+
+.choose-top>h4 {
+    color: #4d4d4d;
+    font-family: Lato-Black, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 67px;
+}
+
+.description {
+    color: #5e5e5e;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.choose-p {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    color: #b9b9b9;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+}
+
+.span-in-ch-p {
+    display: block;
+}
+
+.choose-cont {
+    color: #2f2f2f;
+}
+
+.choose-price {
+    color: #ef5b70;
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.choose-hr {
+    height: 1px;
+    width: 642px;
+    background-color: #eaeaea;
+    margin: 61px auto 41px auto;
+
+}
+
+.select-form {
+    max-width: 537px;
+    height: 189px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.__select, .select {
+    position: relative;
+    width: 144px;
+    height: 35px;
+    margin: 0 auto;
+    color: #bcbcbc;
+    text-transform: capitalize;
+    border: none;
+}
+
+.select {
+    text-transform: uppercase;
+}
+
+.select-field {
+    width: 27%;
+    min-height: 47px;
+    color: #2f2f2f;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border: 0;
+    text-transform: uppercase;
+    padding-top: 16px;
+}
+
+.__select[data-state="active"]  .__select__content {
+    display: flex;
+}
+
+.select[data-state="active"]  .__select__content {
+    display: flex;
+}
+
+
+.__select[data-state="active"] .__select__label + .__select__input + .__select__label {
+    max-height: 40px;
+    border-top-width: 1px;
+}
+
+.select[data-state="active"] .__select__label + .__select__input + .__select__label {
+    max-height: 40px;
+    border-top-width: 1px;
+}
+
+.__select__title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px 14px 9px;
+    border: 1px solid #eaeaea;
+    cursor: pointer;
     position: relative;
 }
 
-#color:before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background-color: red;
-    display: block;
-    position: absolute;
+.__select__title:hover, #integer:hover {
+    border-color: #ef5b70;
 }
 
+
+.__select__title:after {
+    display: block;
+    content: "\f078";
+    font-family: FontAwesome, sans-serif;
+    font-weight: 100;
+    font-size: 9px;
+    position: absolute;
+    right: 9px;
+}
+
+.__select[data-state="active"] .__select__title:after {
+    content: "\f077";
+    font-family: FontAwesome, sans-serif;
+    font-weight: 100;
+    position: absolute;
+    right: 9px;
+}
+
+.select[data-state="active"] .__select__title:after {
+    content: "\f077";
+    font-family: FontAwesome, sans-serif;
+    font-weight: 100;
+    position: absolute;
+    right: 9px;
+}
+
+.__select__content {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-top: none;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    transition: all 0.3s ease-out;
+    z-index: 8;
+    color: #bcbcbc;
+}
+.__select__input {
+    display: none;
+}
+.__select__input:checked + label {
+    background-color: #dedede;
+}
+
+.__select__label {
+    display: flex;
+    align-items: center;
+    width: 143px;
+    height: 35px;
+    padding: 0 14px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+.__select__label + input + .__select__label {
+    border-top: 0 solid #C7CCD160;
+}
+.__select__label:hover {
+    background-color: #ef5b70 !important;
+    color: #ffffff;
+}
+
+
+
+.rect-s {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 11px;
+}
+
+.__select__label>span {
+    display: flex;
+}
+
+.rect-red {
+    background-color: red;
+}
+
+.rect-green {
+   background-color: green;
+}
+
+.rect-blue {
+    background-color: blue;
+}
+
+.rect-black {
+    background-color: black;
+}
+
+.rect-gray {
+    background-color: gray;
+}
+
+#integer {
+    width: 144px;
+    height: 35px;
+    margin: 0 auto;
+    color: #bcbcbc;
+    padding-left: 17px;
+    border: 1px solid #eaeaea;
+}
+
+#integer:focus {
+    outline: none;
+}
+
+.select-button {
+    max-width: 537px;
+    height: 55px;
+    border-radius: 1px;
+    border: 1px solid #ef5b70;
+    background-color: #ffffff;
+    color: #ef5b70;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.select-button:hover {
+    color: #fff;
+    background-color: #f16d7f;
+}
+
+.fa-cart-plus {
+    margin-right: 15px;
+}
+
+.box-product-sing {
+    margin-top: 10px;
+}
+
+.like-also-h2 {
+    display: block;
+    color: #4d4d4d;
+    font-family: Lato-Black, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 59px;
+}
+
+.for-sing-bgc {
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+}
+
+.img-sing {
+    position: absolute;
+    top: -10px;
+    right: 80px;
+}
+
+.rela-sing {
+    position: relative;
+}
