@@ -187,7 +187,7 @@
         </div>
         <div class="shop-cart-item">
             <div class="shop-item-cont shop-left-p">
-                <a href="#" class="shop-img-a"><img src="img/shop-img-1.png" alt=""></a>
+                <a href="#" class="shop-img-a"><img src="img/shop-img-2.png" alt=""></a>
                 <div class="shop-img-cont">
                     <a href="#">mango&#160;people&#160;t&#160;-&#160;shirt</a>
                     <p class="shop-img-p">
@@ -214,7 +214,7 @@
         </div>
         <div class="shop-cart-item">
             <div class="shop-item-cont shop-left-p">
-                <a href="#" class="shop-img-a"><img src="img/shop-img-1.png" alt=""></a>
+                <a href="#" class="shop-img-a"><img src="img/shop-img-3.png" alt=""></a>
                 <div class="shop-img-cont">
                     <a href="#">mango&#160;people&#160;t&#160;-&#160;shirt</a>
                     <p class="shop-img-p">
@@ -239,6 +239,50 @@
                 </span>
             </p>
         </div>
+        <div class="shop-but-panel">
+            <button class="shop-button" type="reset"><span class="shop-but-span">clear shopping cart</span></button>
+            <button class="shop-button"><span class="shop-but-span">continue shopping</span></button>
+        </div>
+    </div>
+</section>
+<section class="shop-total">
+    <div class="container">
+        <form class="shop-select-form">
+            <fieldset class="shop-select-field">
+                <legend>Shipping Address</legend>
+                <div class="shop-select" data-state="">
+                    <div class="shop-select-title" data-default="red"><span>Bangladesh</span></div>
+                    <div class="shop-select-content">
+                        <input id="select0" class="shop-select-input" type="radio" name="Select-n" />
+                        <label for="select0" class="shop-select-label"><span>USA</span></label>
+                        <input id="select1" class="shop-select-input" type="radio" name="Select-n" />
+                        <label for="select1" class="shop-select-label"><span>Russia</span></label>
+                        <input id="select2" class="shop-select-input " type="radio" name="Select-n" />
+                        <label for="select2" class="shop-select-label"><span>England</span></label>
+                        <input id="select3" class="shop-select-input" type="radio" name="Select-n" />
+                        <label for="select3" class="shop-select-label"><span>Germany</span></label>
+                        <input id="select4" class="shop-select-input" type="radio" name="Select-n" />
+                        <label for="select4" class="shop-select-label"><span>Spain</span></label>
+                    </div>
+                </div>
+                <input class="shop-input" type="text" placeholder="State">
+                <input class="shop-input" type="text" placeholder="Postcode / Zip">
+                <button class="shop-button" type="button"><span class="shop-but-span">get a quote</span></button>
+            </fieldset>
+            <fieldset class="shop-select-field">
+                <legend>coupon discount</legend>
+                <span class="enter-coupon-txt">Enter your coupon code if you have one</span>
+                <input class="shop-input" type="text" placeholder="Coupon">
+                <button class="shop-button" type="button"><span class="shop-but-span">Apply coupon</span></button>
+            </fieldset>
+            <fieldset class="shop-select-field shop-field-3">
+                <div class="shop-total-txt">
+                    <p class="total-txt-p"><span class="total-txt-p-span">Sub total</span><span>&#36;900</span></p>
+                    <p class="total-txt-p-2"><span>Grand total</span><span class="total-txt-p-span-2">&#36;900</span></p>
+                </div>
+                <button type="submit" class="shop-check-but"><span>proceed to checkout</span></button>
+            </fieldset>
+        </form>
     </div>
 </section>
 <section class="community_pro">
@@ -342,6 +386,7 @@
         </div>
     </div>
 </footer>
-
+<!-- вызов скрипта для формы -->
+<script src="shop-form.js"></script>
 </body>
 </html>
