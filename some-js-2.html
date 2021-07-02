@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dz-3</title>
+</head>
+<body>
+<script>
+    // Урок 3
+    //задание 1
+    let n = 100;
+
+    nextPrime:
+        for (let i = 2; i <= n; i++) { // Для всех i...
+
+            for (let j = 2; j < i; j++) { // проверить, делится ли число..
+                if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+            }
+
+            console.log( i ); // простое число
+        }
+</script>
+<script>
+    //задание 2
+    var basket = [
+        {
+            title: 'Bla-bla',
+            some_information: 'bla-bla-bla',
+            price: 200,
+            count: 1
+        },
+        {
+            title: 'Bla-bla-bla',
+            some_information: 'bla-bla-bla-bla',
+            price: 300,
+            count: 2
+        },
+        {
+            title: 'Bla-bla-bla-bla',
+            some_information: 'bla-bla-bla-bla-bla',
+            price: 400,
+            count: 3
+        },
+    ];
+    
+    function counter(mas) {
+        var sum = 0;
+        for (var item of mas) {
+            sum += item.price * item.count
+        }
+        return sum
+    }
+
+    console.log(counter(basket))
+</script>
+<script>
+    //задание 3
+
+    for (var i = 0; i <=9; console.log(i++))
+</script>
+<script>
+    //задание 4
+
+    var stars = '';
+
+    for (var i=0; i<20; i++) {
+
+        stars += 'X';
+        console.log(stars)
+    }
+</script>
+<script>
+
+</script>
+</body>
+</html>
