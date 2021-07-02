@@ -1,0 +1,93 @@
+*
+  margin: 0
+  padding: 0
+
+@import "vars"
+
+@import "mixins"
+
+
+
+
+
+.container
+  max-width: 1173px
+  height: 100%
+  margin: 0 auto
+
+
+.header
+  max-width: 1920px
+  min-height: 130px
+
+  .header-nav
+    max-width: 100%
+    min-height: 24px
+    background-color: #f6f6f6
+    @extend .nav-text
+
+    &__container
+      height: 24px
+      @extend .flex-s-b
+
+      .nav-left
+        width: 470px
+        @extend .flex-s-b
+        .nav-a
+          align-items: center
+          +styling-a(#7e7e7e)
+          &__display
+            display: none
+          .span-for-count
+            text-transform: none
+
+      .nav-right
+        display: flex
+        &_nav-det
+          .nav-det-div
+            padding-left: 9px
+            @extend .flex-s-a
+            flex-direction: column
+            @extend .border-det-div
+
+          .nav-det-div>span
+            cursor: pointer
+            display: block
+            color: $col-header-nav
+
+        &_nav-det>summary
+          @include del-sum-marker
+          height: 24px
+          align-items: center
+          padding: 1px 10px 0
+
+        &_nav-det[open]>summary
+          background-color: #fff
+          padding: 0 9px
+          @extend .border-nav-det
+          @include create-sum-marker
+
+        .nav-det-1
+          width: 92px
+          .nav-det-div
+            min-height: 50px
+
+        .nav-det-2
+          width: 98px
+          .nav-det-div
+            min-height: 105px
+            .det-div-img
+              margin-right: 6px
+          .sum-2-span
+            display: block
+            width: 14px
+            height: 11px
+            .sum-2-img
+              display: none
+        .nav-det-2[open] .sum-2-img
+          display: block
+        .nav-a
+          margin-left: 28px
+          align-items: center
+          +styling-a(#7e7e7e)
+

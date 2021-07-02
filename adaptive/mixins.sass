@@ -1,0 +1,25 @@
+@import "vars"
+
+@mixin del-sum-marker
+  color: $col-header-nav
+  @extend .flex-s-b
+  list-style: none
+  cursor: pointer
+  &::marker
+    display: none
+  &:after
+    display: block
+    content: "\f078"
+    font-family: FontAwesome, sans-serif
+    font-weight: 400
+    font-size: 8px
+  &:focus
+    outline: none
+
+@mixin create-sum-marker
+  &:after
+    content: "\f077"
+    font-family: FontAwesome, sans-serif
+    font-weight: 400
+    font-size: 8px
+

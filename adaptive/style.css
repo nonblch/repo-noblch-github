@@ -1,0 +1,177 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-text, .header .header-nav {
+  color: #444444;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.flex-s-b, .header .header-nav__container .nav-right_nav-det > summary, .header .header-nav__container .nav-left, .header .header-nav__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-s-a, .header .header-nav__container .nav-right_nav-det .nav-det-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.border-nav-det, .header .header-nav__container .nav-right_nav-det[open] > summary {
+  border-right: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+  border-top: 1px solid #bbbbbb;
+}
+
+.border-det-div, .header .header-nav__container .nav-right_nav-det .nav-det-div {
+  border-right: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.nav-text, .header .header-nav {
+  color: #444444;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.flex-s-b, .header .header-nav__container .nav-right_nav-det > summary, .header .header-nav__container .nav-left, .header .header-nav__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-s-a, .header .header-nav__container .nav-right_nav-det .nav-det-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.border-nav-det, .header .header-nav__container .nav-right_nav-det[open] > summary {
+  border-right: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+  border-top: 1px solid #bbbbbb;
+}
+
+.border-det-div, .header .header-nav__container .nav-right_nav-det .nav-det-div {
+  border-right: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.container {
+  max-width: 1173px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 1920px;
+  min-height: 130px;
+}
+.header .header-nav {
+  max-width: 100%;
+  min-height: 24px;
+  background-color: #f6f6f6;
+}
+.header .header-nav__container {
+  height: 24px;
+}
+.header .header-nav__container .nav-left {
+  width: 470px;
+}
+.header .header-nav__container .nav-left .nav-a {
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  color: #7e7e7e;
+}
+.header .header-nav__container .nav-left .nav-a__display {
+  display: none;
+}
+.header .header-nav__container .nav-left .nav-a .span-for-count {
+  text-transform: none;
+}
+.header .header-nav__container .nav-right {
+  display: flex;
+}
+.header .header-nav__container .nav-right_nav-det .nav-det-div {
+  padding-left: 9px;
+  flex-direction: column;
+}
+.header .header-nav__container .nav-right_nav-det .nav-det-div > span {
+  cursor: pointer;
+  display: block;
+  color: #7e7e7e;
+}
+.header .header-nav__container .nav-right_nav-det > summary {
+  color: #7e7e7e;
+  list-style: none;
+  cursor: pointer;
+  height: 24px;
+  align-items: center;
+  padding: 1px 10px 0;
+}
+.header .header-nav__container .nav-right_nav-det > summary::marker {
+  display: none;
+}
+.header .header-nav__container .nav-right_nav-det > summary:after {
+  display: block;
+  content: "";
+  font-family: FontAwesome, sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+}
+.header .header-nav__container .nav-right_nav-det > summary:focus {
+  outline: none;
+}
+.header .header-nav__container .nav-right_nav-det[open] > summary {
+  background-color: #fff;
+  padding: 0 9px;
+}
+.header .header-nav__container .nav-right_nav-det[open] > summary:after {
+  content: "";
+  font-family: FontAwesome, sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+}
+.header .header-nav__container .nav-right .nav-det-1 {
+  width: 92px;
+}
+.header .header-nav__container .nav-right .nav-det-1 .nav-det-div {
+  min-height: 50px;
+}
+.header .header-nav__container .nav-right .nav-det-2 {
+  width: 98px;
+}
+.header .header-nav__container .nav-right .nav-det-2 .nav-det-div {
+  min-height: 105px;
+}
+.header .header-nav__container .nav-right .nav-det-2 .nav-det-div .det-div-img {
+  margin-right: 6px;
+}
+.header .header-nav__container .nav-right .nav-det-2 .sum-2-span {
+  display: block;
+  width: 14px;
+  height: 11px;
+}
+.header .header-nav__container .nav-right .nav-det-2 .sum-2-span .sum-2-img {
+  display: none;
+}
+.header .header-nav__container .nav-right .nav-det-2[open] .sum-2-img {
+  display: block;
+}
+.header .header-nav__container .nav-right .nav-a {
+  margin-left: 28px;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  color: #7e7e7e;
+}
+
+/*# sourceMappingURL=style.css.map */
