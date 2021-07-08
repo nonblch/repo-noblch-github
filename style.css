@@ -1886,6 +1886,10 @@ details a {
     background-color: #e9e9e9;
 }
 
+.pro-4 > img{
+    padding-top: 4px;
+}
+
 .pro-5 {
     background-color: #f1edea;
 }
@@ -1894,23 +1898,31 @@ details a {
     background-color: #e9e9e9;
 }
 
+.pro-6 > img{
+    padding-top: 12px;
+}
+
 .pro-9 {
     background-color: #e9e9e9;
 
+}
+
+.pro-9 > img{
+    padding-top: 10px;
 }
 
 .div-for-img-pro > img {
     margin: 0 auto;
 }
 
-.div-for-img-pro {
+.transition-pro {
     -moz-transition: all 0.4s ease-out;
     -o-transition: all 0.4s ease-out;
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
 }
 
-.div-for-img-pro:hover{
+.transition-pro:hover{
     -webkit-transform: scale(1.08);
     -moz-transform: scale(1.08);
     -o-transform: scale(1.08);
