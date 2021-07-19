@@ -12,7 +12,7 @@ class Good {
     render() {
         return `<div class="item">
 <a href="single_page.html" class="product"><img class="product-img" src=${this._img_src} alt="product photo"><div class="product-text-box"><p class="product-text">${this._title}</p><p class="product-price">&#36;${this._price}</p></div></a>
-<div class="box-add"><a class="add" href="shopping_cart.html"><img class="add-img" src="img/cart-add.svg" alt="cart-img">Add to cart</a></div></div>`
+<div class="box-add"><a class="add" href="#"><img class="add-img" src="img/cart-add.svg" alt="cart-img">Add to cart</a></div></div>`
     }
 }
 
@@ -34,22 +34,6 @@ class GoodMan extends Good {
 
 }
 
-class GoodInCart extends Good {
-    constructor(title, price, img_src, quantity = 1) {
-        super (title, price, img_src);
-        this._quantity = quantity;
-    }
-
-    getPrice() {
-        return this._price * this._quantity;
-    }
-
-    render() {
-        return `<div class="basket-purch"><div class="basket-left"><a class="basket-item-a" href="single_page.html"><img src=${this._img_src} alt="cart_image" style="width: 72px; height: 82px"></a><div class="bask-img-cont"><a href="single_page.html"><span class="img-cont-span-1">${this._title}</span></a><img src="img/stars.png" alt="stars_image"><span class="img-cont-span-2">${this._quantity} x&nbsp; &#36;${this._price}</span></div></div><button class="right-drop-x"><span class="far fa-times-circle"></span></button></div>`
-    }
-}
-
-
 
 class GoodList {
     constructor (goods){
@@ -67,6 +51,22 @@ class GoodList {
 
 }
 
+class GoodInCart extends Good {
+    constructor(title, price, img_src, quantity = 1) {
+        super (title, price, img_src);
+        this._quantity = quantity;
+    }
+
+    getPrice() {
+        return this._price * this._quantity;
+    }
+
+    render() {
+        return `<div class="basket-purch"><div class="basket-left"><a class="basket-item-a" href="single_page.html"><img src=${this._img_src} alt="cart_image" style="width: 72px; height: 82px"></a><div class="bask-img-cont"><a href="single_page.html"><span class="img-cont-span-1">${this._title}</span></a><img src="img/stars.png" alt="stars_image"><span class="img-cont-span-2">${this._quantity} x&nbsp; &#36;${this._price}</span></div></div><button class="right-drop-x"><span class="far fa-times-circle"></span></button></div>`
+    }
+}
+
+
 class GoodListInCart extends GoodList {
     constructor (goods) {
         super (goods);
@@ -76,11 +76,7 @@ class GoodListInCart extends GoodList {
     renderGoodsList () {
         let goodsList = this._goods.map(
             item => item.render()
-        );
-        for (let i = 0; i <goodsList.length; i++) {
-
-        }
-        goodsList.join('');
+        ).join('');
 
 
         this._$goodsListContainer.insertAdjacentHTML('beforeend', goodsList)
@@ -112,16 +108,33 @@ const listMan = new GoodList([
     new GoodMan('Blue Spot Tee', 55, "img/man/man_9.png",  'pro-9')
 ]);
 
+
+
 const listInCart = new GoodListInCart ([]);
 
 const $title = document.querySelector('title').innerHTML;
 
 
-const $blockAdd = document.querySelector('.box-add');
+const $blockAdd = document.querySelectorAll('.box-add');
 
-$blockAdd.addEventListener('click', ()=> {
+for (let i = 0; i < $blockAdd.length; i++) {
+    $blockAdd[i].classList.add('control-box-'+ i);
 
-});
+    $blockAdd[i].addEventListener('click',()=> {
+        const getClasses = $blockAdd[i].getAttribute('class').split(' ');
+        const neededClass = getClasses[1].split('-');
+        const numberOfItem = parseInt(neededClass[2]);
+        if ($title == 'Index') {
+            const itemOfCart = list[numberOfItem];
+            listInCart.push(itemOfCart);
+            listInCart.renderGoodsList()
+        }
+
+        }
+    )
+}
+
+
 
 if ($title == 'Index') {
     list.renderGoodsList();
