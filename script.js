@@ -83,6 +83,19 @@ class GoodListInCart extends GoodList {
     }
 }
 
+const list2 = [
+    {title: 'Marina Club Tee', price: 50, img_src: "img/product-1.jpg"},
+    {title: 'Red Silk Blouse', price: 60, img_src: "img/2.jpg"},
+    {title: 'Blue Lash Jacket', price: 120, img_src: "img/3.jpg"},
+    {title: 'Marina Flower Blouse', price: 75, img_src: "img/4.jpg"},
+    {title: 'Marina Stripe Blouse', price: 72, img_src: "img/5.jpg"},
+    {title:  'Blue Business Jacket', price: 200, img_src: "img/6.jpg"},
+    {title: 'Brown Trousers', price: 80, img_src: "img/7.jpg"},
+    {title: 'Dark Blue Hoodie', price: 90, img_src: "img/8.jpg"},
+];
+
+
+
 const list = new GoodList([
     new Good ('Marina Club Tee', 50, "img/product-1.jpg"),
     new Good ('Red Silk Blouse', 60, "img/2.jpg"),
@@ -94,7 +107,17 @@ const list = new GoodList([
     new Good ('Dark Blue Hoodie', 90, "img/8.jpg"),
 ]);
 
-
+const list3 = [
+    {title: 'Black Hoodie', price:102, img_src: "img/man/man_1.png", extra_class: 'pro-1'},
+    {title: 'Brown Jacket', price:200, img_src: "img/man/man_2.png", extra_class: ''},
+    {title: 'Blue Lash Jacket', price: 120, img_src: "img/man/man_3.png", extra_class: ''},
+    {title: 'Gray Spot Tee', price: 55, img_src: "img/man/man_4.png", extra_class: 'pro-4'},
+    {title: 'Dark Blue Hoodie', price: 90, img_src: "img/man/man_5.png", extra_class: 'pro-5'},
+    {title: 'American Style Jacket', price: 160, img_src: "img/man/man_6.png", extra_class: 'pro-6'},
+    {title: 'Blue Business Jacket', price:200, img_src: "img/man/man_7.png", extra_class: ''},
+    {title: 'Brown Viscose Jacket', price:182, img_src: "img/man/man_8.png", extra_class: ''},
+    {title: 'Blue Spot Tee', price: 55, img_src: "img/man/man_9.png", extra_class: 'pro-9'},
+];
 
 const listMan = new GoodList([
     new GoodMan('Black Hoodie',102, "img/man/man_1.png", 'pro-1'),
@@ -115,24 +138,6 @@ const listInCart = new GoodListInCart ([]);
 const $title = document.querySelector('title').innerHTML;
 
 
-const $blockAdd = document.querySelectorAll('.box-add');
-
-for (let i = 0; i < $blockAdd.length; i++) {
-    $blockAdd[i].classList.add('control-box-'+ i);
-
-    $blockAdd[i].addEventListener('click',()=> {
-        const getClasses = $blockAdd[i].getAttribute('class').split(' ');
-        const neededClass = getClasses[1].split('-');
-        const numberOfItem = parseInt(neededClass[2]);
-        if ($title == 'Index') {
-            const itemOfCart = list[numberOfItem];
-            listInCart.push(itemOfCart);
-            listInCart.renderGoodsList()
-        }
-
-        }
-    )
-}
 
 
 
@@ -143,4 +148,23 @@ if ($title == 'Index') {
 }
 
 
+const $blockAdd = document.querySelectorAll('.add');
+
+for (let i = 0; i < $blockAdd.length; i++) {
+    $blockAdd[i].classList.add('control-box-'+ i);
+
+    $blockAdd[i].addEventListener('click',(event)=> {
+            event.preventDefault();
+            const getClasses = $blockAdd[i].getAttribute('class').split(' ');
+            const neededClass = getClasses[1].split('-');
+            const numberOfItem = parseInt(neededClass[2]);
+            if ($title == 'Index') {
+                const itemOfCart = list._goods[numberOfItem];
+
+                listInCart._goods.push(itemOfCart);
+
+            }
+
+        });
+}
 
